@@ -61,10 +61,10 @@ fn draw_heart_bar(score: u32) {
 }
 
 fn print_cat_love() {
-    println!("{PURPLE}           ╭────────────────────────────────────────────╮");
-    println!("           │  {ROSE}\"Scanning feelings for memory leaks...\"   {PURPLE}│");
-    println!("           │   {PINK}100% thread-safe pyaar milega! 💖        {PURPLE}│");
-    println!("           ╰───────────────────────╮────────────────────╯");
+    println!("{PURPLE}           ╭──────────────────────────────────────────────╮");
+    println!("           │ {ROSE}\"Chubby Billi scanning dil ka memory leak...\" {PURPLE}│");
+    println!("           │  {PINK}Pyaar mein break statement mat lagana! 💖   {PURPLE}│");
+    println!("           ╰───────────────────────╮──────────────────────╯");
     println!("                                  /{RESET}");
     println!("{ROSE}                  /\\_____/\\      /  ");
     println!("                 /  o   o  \\ <──'   ");
@@ -86,13 +86,11 @@ fn main() {
 
     print_cat_love();
 
-   
     print!("{BOLD}Enter Your Name : {RESET}");
     io::stdout().flush().unwrap();
     let mut name1 = String::new();
     io::stdin().read_line(&mut name1).unwrap();
     let name1 = name1.trim();
-
 
     print!("{BOLD}Enter Crush / Partner: {RESET}");
     io::stdout().flush().unwrap();
@@ -101,32 +99,31 @@ fn main() {
     let name2 = name2.trim();
 
     if name1.is_empty() || name2.is_empty() {
-        println!("\n{RED}Error: NullPointerException! Pyaar bina naam ke nahi hota!{RESET}");
+        println!("\n{RED}Error 404: Crush Not Found! Bina naam ke hawa mein teer chala rahe ho? 💘{RESET}");
         return;
     }
 
     println!("\n{YELLOW}⚡ Initiating Romantic Compatibility Audit...{RESET}\n");
-    sleep(Duration::from_millis(600));
+    sleep(Duration::from_millis(500));
 
-    
     let checks = [
-        "1. Scanning biometric heartbeat over TCP socket...",
-        "2. Consulting Rust Borrow Checker for jealousy issues...",
-        "3. Checking multi-threaded synchronization & data races...",
-        "4. Validating lifetime annotations ('static vs temporary)...",
-        "5. Checking Git merge conflicts in feelings...",
+        "1. Wi-Fi aur dil ka signal match kar rahe hain...",
+        "2. Rust Borrow Checker se jealousy & third-party audit chal rahi hai...",
+        "3. Late-night text latency aur 'seen' timestamps check ho rahe hain...",
+        "4. Validating Lifetime annotations: ('forever vs 'kat_gaya)...",
+        "5. Checking Git merge conflicts: Koi teesra branch toh nahi ghus raha?...",
     ];
 
     for check in checks {
-        typewriter(&format!("  {CYAN}▸ {check}{RESET} "), 10);
-        sleep(Duration::from_millis(400));
+        typewriter(&format!("  {CYAN}▸ {check}{RESET} "), 8);
+        sleep(Duration::from_millis(350));
         println!("{GREEN}[PASSED]{RESET}");
     }
 
-    sleep(Duration::from_millis(500));
-    println!("\n{YELLOW}======================================================{RESET}");
-    println!("{BOLD}              📊 AUDIT REPORT GENERATED               {RESET}");
-    println!("{YELLOW}======================================================{RESET}\n");
+    sleep(Duration::from_millis(400));
+    println!("\n{PURPLE}╔══════════════════════════════════════════════════════════╗{RESET}");
+    println!("{PINK}║              📊 AUDIT REPORT GENERATED                   ║{RESET}");
+    println!("{PURPLE}╚══════════════════════════════════════════════════════════╝{RESET}\n");
 
     let score = calculate_love_score(name1, name2);
 
@@ -138,40 +135,42 @@ fn main() {
     // Verdicts
     print!("{BOLD}Official Compiler Verdict: {RESET}");
     if score >= 95 {
-        println!("{GREEN}PERFECT THREAD SAFETY! 💍🦀{RESET}");
+        println!("{GREEN}PERFECT MUTUAL OWNERSHIP! 💍🦀{RESET}");
         println!(
-            "{MAGENTA}“Aapka rishta 'static lifetime jaisa hai—hamesha amar! \n\
-             Zero data races, 100% memory safe romance. \n\
-             Panditji ko call karo, shaadi fix hai!”{RESET}"
+            "{PINK}“Bhai yeh rishta nahi, Rust ka production-ready code hai! \n\
+             Zero data races, 'static lifetime amar romance! \n\
+             Panditji ko bulao date fix karein, aur shaadi ke card pe QR code lagwao!”{RESET}"
         );
     } else if score >= 80 {
-        println!("{GREEN}HIGH COMPATIBILITY! 💕✨{RESET}");
+        println!("{GREEN}STRONG THREAD SAFETY! 💕🚀{RESET}");
         println!(
-            "{CYAN}“Bohot zabardast tuning hai! \n\
-             Bas yaad rakhna: Pyaar mein sirf EK hi mutable reference allowed hai, \n\
-             warna jealousy ka bug aa sakta hai! 😉”{RESET}"
+            "{CYAN}“Tuning ekdum first-class hai! \n\
+             Bas compiler ki ek hi warning hai: Ek time pe sirf EK hi mutable reference rakhna... \n\
+             Doosri crush ko dekha toh borrow checker ghar aake pitega! 😉”{RESET}"
         );
     } else if score >= 65 {
-        println!("{YELLOW}STABLE BUT NEEDS REFACTORING! 🛠️{RESET}");
+        println!("{YELLOW}STABLE BUT HIGH LATENCY! ☕📶{RESET}");
         println!(
-            "{YELLOW}“Connection theek chal raha hai, lekin thoda latency aur \n\
-             garbage collection ki zaroorat hai. Ek acchi coffee date par jaao! ☕”{RESET}"
+            "{YELLOW}“Connection theek-thaak chal raha hai, par message 'Seen' karke late reply ka \n\
+             thoda runtime overhead hai! Cache clear karo aur ek shaam momos/coffee date pe jao! ☕”{RESET}"
         );
     } else if score >= 50 {
-        println!("{YELLOW}WARNING: RUNTIME OVERHEAD! ⚠️{RESET}");
+        println!("{YELLOW}WARNING: RUNTIME OVERHEAD & DANGLING POINTER! ⚠️👀{RESET}");
         println!(
-            "{YELLOW}“Dangling pointer detected! Ek partner emotionally unallocated lag raha hai. \n\
-             Communication ka bandwidth badhao!”{RESET}"
+            "{YELLOW}“Borderline passing marks mile hain guru! \n\
+             Dangling pointer detected—dono mein se ek partner emotionally unallocated lag raha hai! \n\
+             Ya toh efforts badhao, warna 'friendzone' wali branch mein merge ho jaoge! 😅”{RESET}"
         );
     } else {
-        println!("{RED}CRITICAL PANIC: SEGMENTATION FAULT! 💔💥{RESET}");
+        println!("{RED}CRITICAL KERNEL PANIC: DIL CRASH HO GAYA! 💔🚑{RESET}");
         println!(
-            "{RED}“Dil crash ho gaya! Borrow checker ne pyaar reject kar diya! \n\
-             Immediate rollback karke dost ban ke raho.”{RESET}"
+            "{RED}“Bhaago! Unhandled Exception! Borrow checker ne haath khade kar diye hain! \n\
+             Rishte mein itne merge conflicts hain ki Git bhi ro raha hai. \n\
+             Immediate rollback karo aur dost ban kar samosa khao!”{RESET}"
         );
     }
 
-    println!("\n{CYAN}======================================================{RESET}");
-    println!("{MAGENTA}    Stay Safe, Stay Concurrent & Keep Rusting! 🦀     {RESET}");
-    println!("{CYAN}======================================================{RESET}\n");
+    println!("\n{PURPLE}╔══════════════════════════════════════════════════════════╗{RESET}");
+    println!("{PINK}║       Stay Safe, Stay Concurrent & Keep Rusting! 🦀      ║{RESET}");
+    println!("{PURPLE}╚══════════════════════════════════════════════════════════╝{RESET}\n");
 }
