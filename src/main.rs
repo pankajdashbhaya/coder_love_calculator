@@ -5,7 +5,6 @@ use std::time::Duration;
 const PINK: &str = "\x1b[38;2;255;105;180;1m";       
 const ROSE: &str = "\x1b[38;2;255;160;190;1m";       
 const PURPLE: &str = "\x1b[38;2;195;130;255;1m";    
-const CORAL: &str = "\x1b[38;2;255;127;80;1m";       
 const CYAN: &str = "\x1b[38;2;77;208;225;1m";        
 const YELLOW: &str = "\x1b[38;2;255;213;79;1m";      
 const GREEN: &str = "\x1b[38;2;129;199;132;1m";      
@@ -61,17 +60,20 @@ fn draw_heart_bar(score: u32) {
     println!("] {BOLD}{score}%{RESET}");
 }
 
-fn print_ferris_love() {
+fn print_cat_love() {
     println!("{PURPLE}           ╭────────────────────────────────────────────╮");
     println!("           │  {ROSE}\"Scanning feelings for memory leaks...\"   {PURPLE}│");
     println!("           │   {PINK}100% thread-safe pyaar milega! 💖        {PURPLE}│");
     println!("           ╰───────────────────────╮────────────────────╯");
     println!("                                  /{RESET}");
-    println!("{CORAL}                  _~^~^~_        /  ");
-    println!("              \\) /  ◕ ‿ ◕  \\ (/ <'  ");
-    println!("                '_   {RED}♥{CORAL}   _'       ");
-    println!("                / '-----' \\         {RESET}");
-    println!("              {PINK}✨ ~ Ferris in Love ~ ✨{RESET}\n");
+    println!("{ROSE}                  /\\_____/\\      /  ");
+    println!("                 /  o   o  \\ <──'   ");
+    println!("                ( ==  w  == )       ");
+    println!("                 )    {RED}♥{ROSE}    (        ");
+    println!("                (           )       ");
+    println!("               ( (  )   (  ) )      ");
+    println!("              (__(__)___(__)__)     {RESET}");
+    println!("            {PINK}✨ ~ Chubby Cat in Love ~ ✨{RESET}\n");
 }
 
 fn main() {
@@ -82,7 +84,7 @@ fn main() {
     println!("{YELLOW}║          [ Powered by Rust Borrow Checker v1.0 ]         ║{RESET}");
     println!("{PURPLE}╚══════════════════════════════════════════════════════════╝{RESET}\n");
 
-    print_ferris_love();
+    print_cat_love();
 
    
     print!("{BOLD}Enter Your Name : {RESET}");
