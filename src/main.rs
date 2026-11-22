@@ -11,7 +11,6 @@ const GREEN: &str = "\x1b[38;2;129;199;132;1m";
 const RED: &str = "\x1b[38;2;255;82;82;1m";          
 const BOLD: &str = "\x1b[1m";
 const RESET: &str = "\x1b[0m";
-const MAGENTA: &str = PINK;                         
 
 fn typewriter(text: &str, delay_ms: u64) {
     for ch in text.chars() {
